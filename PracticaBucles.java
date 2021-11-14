@@ -40,10 +40,7 @@ public class PracticaBucles {
      *  Hazlo sin utilizar if
      */
     public boolean esImpar(int numero)   {
-        //TODO
-        
-        
-        return  false;
+        return  numero % 2 != 0;
     }
 
     /**
@@ -56,10 +53,18 @@ public class PracticaBucles {
      *   
      */
     public int obtenerNumeroSinCeros(int numero)   {
-        //TODO
-        
-        
-        return 0;
+        int result = 0;
+        int resto = 0;
+        int x = 1;
+        while(numero > 0){
+            resto = numero % 10;
+            numero = numero/ 10;
+            if(resto != 0){
+                result += resto * Math.pow(10, x - 1);
+                x++;
+            }
+        }
+        return result;
     }
 
     /**
