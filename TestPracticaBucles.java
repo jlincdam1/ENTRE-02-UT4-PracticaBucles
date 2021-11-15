@@ -27,20 +27,20 @@ public class TestPracticaBucles
         Scanner teclado = new Scanner(System.in);
         PracticaBucles test = new PracticaBucles();
         
-        System.out.println("Dame nº máximo de aleatorios a generar (n > 0): ");
+        System.out.print("Dame nº máximo de aleatorios a generar (n > 0): ");
         int n = teclado.nextInt();
-        if(n <= 0){
-            System.out.println("Dame nº máximo de aleatorios a generar (n > 0): ");
+        if(n < 0){
+            System.out.print("Dame nº máximo de aleatorios a generar (n > 0): ");
             n = teclado.nextInt();
         }
         test.generarNumeros(n);
         Utilidades.hacerPausa();
         Utilidades.borrarPantalla();
         
-        System.out.println("Teclea altura de la letra N (3 <= altura <= 10): ");
+        System.out.print("Teclea altura de la letra N (3 <= altura <= 10): ");
         int altura = teclado.nextInt();
         if(altura >= 3 && altura <= 10){
-            System.out.println("Altura incorrecta. " +
+            System.out.print("Altura incorrecta. " +
             "Teclea altura de la letra N (3 <= altura <= 10): ");
             altura = teclado.nextInt();
         }
