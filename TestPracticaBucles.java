@@ -34,8 +34,17 @@ public class TestPracticaBucles
             n = teclado.nextInt();
         }
         test.generarNumeros(n);
-        Utilidades.hacerpausa();
-        Utilidades.hacerpausa();
+        Utilidades.hacerPausa();
+        Utilidades.borrarPantalla();
+        
+        System.out.println("Teclea altura de la letra N (3 <= altura <= 10): ");
+        int altura = teclado.nextInt();
+        if(altura >= 3 && altura <= 10){
+            System.out.println("Altura incorrecta. " +
+            "Teclea altura de la letra N (3 <= altura <= 10): ");
+            altura = teclado.nextInt();
+        }
+        test.escribirLetraN(altura);
     }
 }
 
