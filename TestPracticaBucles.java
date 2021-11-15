@@ -39,7 +39,7 @@ public class TestPracticaBucles
         
         System.out.print("Teclea altura de la letra N (3 <= altura <= 10): ");
         int altura = teclado.nextInt();
-        while(altura >= 3 && altura <= 10){
+        while(altura < 3 || altura > 10){
             System.out.print("Altura incorrecta. " +
             "Teclea altura de la letra N (3 <= altura <= 10): ");
             altura = teclado.nextInt();
